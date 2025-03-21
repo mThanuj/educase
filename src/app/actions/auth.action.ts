@@ -1,5 +1,5 @@
 export const signup = (credentials: LoginFormType) => {
-  let users = JSON.parse(localStorage.getItem("users") || "[]");
+  const users = JSON.parse(localStorage.getItem("users") || "[]");
 
   users.push(credentials);
 
