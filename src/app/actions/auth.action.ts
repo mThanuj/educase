@@ -7,7 +7,7 @@ export const signup = (credentials: LoginFormType) => {
 };
 
 export const signin = (credentials: LoginFormType) => {
-  let users = JSON.parse(localStorage.getItem("users") || "[]");
+  const users = JSON.parse(localStorage.getItem("users") || "[]");
 
   if (!users.some((user: LoginFormType) => user.email === credentials.email)) {
     return null;
